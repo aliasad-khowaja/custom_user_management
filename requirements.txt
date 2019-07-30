@@ -1,0 +1,6 @@
+Django
+djangorestframework
+mysqlclient
+passlib
+PyJWT
+ujson
