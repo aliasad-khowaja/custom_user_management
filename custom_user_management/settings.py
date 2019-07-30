@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "custom_user_management.middleware.AuthenticationMiddleware"
 ]
 
 ROOT_URLCONF = 'custom_user_management.urls'

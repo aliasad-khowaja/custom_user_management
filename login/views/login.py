@@ -29,11 +29,10 @@ class LoginView(APIView):
         if user:
             if Helper.check_hashed_password(password, user.password):
                 payload = {
-                    'id': user.id,
                     'username': user.username,
                     'role': user.role.id
                 }
-                jwt_token = {'token': jwt.encode(payload, SECRET_KEY)}
+                jwt_token = {'token': jwt.encode(payload, SECRET_KEY, algorithm='HS256')}
                 return HttpResponse(
                     ujson.dumps(jwt_token),
                     status=200,
