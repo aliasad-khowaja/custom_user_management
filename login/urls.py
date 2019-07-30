@@ -1,6 +1,7 @@
 from django.urls import path
 
-from .views import RoleView, RoleDetail, UserView, UserDetail
+from .views.role import RoleView, RoleDetail
+from .views.user import UserView, UserDetail
 
 app_name = "login"
 
